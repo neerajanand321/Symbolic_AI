@@ -111,3 +111,16 @@ ans
 """returns expansion of given function eg: '-5*x**4/128 + x**3/16 - x**2/8 + x/2 + 1'"""
 ```
 
+## Dependencies
+
+To run the notebooks, you will need to have the following dependencies installed:
+
+- Python 3.x
+- Jupyter Notebook
+- sympy
+- NumPy
+- Pandas
+- Matplotlib
+- PyTorch
+
+You can install these dependencies using pip or conda.
