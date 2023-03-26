@@ -1,6 +1,9 @@
 # Symbolic Calculation Project
 
 This project involves three tasks: data preprocessing, the use of an LSTM model, and the use of a transformer model.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/78193865/227809040-659d1bc2-ec6f-451a-909c-302fe851016a.png" width="350" title="hover text">
+</p>
 
 ### Common Task 1: Dataset Preprocessing
 
