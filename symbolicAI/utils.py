@@ -34,7 +34,7 @@ class Predict():
    -> function = mathematical function for which we want expansion eg; "sin(x)"
    -> model = Trained model
    -> vocab_to_int = dictionary containing int corresponding to each token
-   -> int_to_vocab = dictionary containg token corresponding to each target int
+   -> int_to_vocab = dictionary containing token corresponding to each target int
   '''
   def __init__(self, function, model, vocab_to_int, int_to_vocab):
     super(Predict, self).__init__()
@@ -54,15 +54,3 @@ class Predict():
     pred = out.argmax().item()
     pred = self.int_to_vocab[pred]
     return pred
-
-
-
-
-
-
-
-
-
-
-
-
