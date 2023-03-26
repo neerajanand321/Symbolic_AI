@@ -2,21 +2,21 @@
 
 This project involves three tasks: data preprocessing, the use of an LSTM model, and the use of a transformer model.
 
-## Common Task 1: Dataset Preprocessing
+### Common Task 1: Dataset Preprocessing
 
 We have to use Sympy or Mathematica to generate datasets of functions with their Taylor expansions up the fourth order and to Tokenize the dataset.
 
 - Created `dataset.py` in **symbolicAI** folder 
 - Defined class `Data` in `dataset.py` which contain functions `generate` to generate the dataset using Sympy, `tokenize` to tokenize the dataset and `get_token_dict` to get the dictionary of tokens
 
-## Common Task 2: Use LSTM Model
+### Common Task 2: Use LSTM Model
 
 We have to train an LSTM model to learn the Taylor expansion of each function.
 
 - Created `model.py` in **symbolicAI** folder
 - Defined `LSTMModel` in `model.py` 
 
-## Specific Task 3: Use Transformer model
+### Specific Task 3: Use Transformer model
 
 We have to train a Transformer  model to learn the Taylor expansion of each function.
 
