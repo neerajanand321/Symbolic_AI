@@ -23,3 +23,5 @@ We have to train a Transformer  model to learn the Taylor expansion of each func
 - Defined `TransformerModel` in `model.py`
 
 **`train.py` contains `Train` class which is used to train the model and to get the trained model for prediction, `utils.py` contain class `TrainDataset` to create PyTorch dataset for training, `TestDataset` to create PyTorch dataset for testing and `Predict` class to get the prediction provided any function**
+
+#### `Symbolic_AI.ipynb` demonstrates the creation of dataset, tokenization of dataset, training of LSTM and Transformer model and the Prediction of model on various mathematical functions.
