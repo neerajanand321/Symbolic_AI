@@ -11,12 +11,22 @@ We have to use Sympy or Mathematica to generate datasets of functions with their
 
 ### Common Task 2: Use LSTM Model
 
+**Long Short-Term Memory (LSTM)** networks are a type of recurrent neural network capable of learning order dependence in sequence prediction problems.
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/LSTM_Cell.svg" width="350" title="hover text">
+</p>
+
+
 We have to train an LSTM model to learn the Taylor expansion of each function.
 
 - Created `model.py` in **symbolicAI** folder
 - Defined `LSTMModel` in `model.py` 
 
 ### Specific Task 3: Use Transformer model
+A **transformer** is a deep learning model that adopts the mechanism of self-attention, differentially weighting the significance of each part of the input data.
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/The-Transformer-model-architecture.png" width="350" title="hover text">
+</p>
 
 We have to train a Transformer  model to learn the Taylor expansion of each function.
 
