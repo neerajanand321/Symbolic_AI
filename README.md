@@ -28,7 +28,17 @@ We have to train a Transformer  model to learn the Taylor expansion of each func
 
 ## Usage
 
-#### 1) Generate Dataset 
+#### 1) Setup
+Clone the repository 
+```bash
+$ git clone https://github.com/neerajanand321/Symbolic_AI.git
+```
+move to the directory
+```bash
+cd Symbolic_AI/symbolicAI
+```
+
+#### 2) Generate Dataset 
 ```python
 from dataset import data
 from sympy import *
@@ -41,7 +51,7 @@ data_df = data.generate()
 """ returns Dataframe containing functions and their corresponding expansion"""
 ```
 
-#### 2) Tokenize Dataset
+#### 3) Tokenize Dataset
 ```python
 df_tokenized = data.tokenize(data_df) 
 """ 
@@ -50,14 +60,14 @@ returns Dataframe containing token of functions and token of expansions
 """
 ```
 
-#### 3) Dataset class
+#### 4) Dataset class
 ```python
 from utils import TrainDataset, TestDaatset
 data = TrainDataset(df_tokenized)
 """returns PyTorch Dataset for training"""
 ```
 
-#### 4) Training
+#### 5) Training
 ```python
 # Hyperparameter
 epoch = 15000
@@ -78,7 +88,7 @@ losses = train_obj.run(train_loader, model_type)
 """returns list of epoch loss"""
 ```
 
-#### 5) Prediction
+#### 6) Prediction
 ```python
 example = "sqrt(x + 1)"
 model = train_obj.get_model()
