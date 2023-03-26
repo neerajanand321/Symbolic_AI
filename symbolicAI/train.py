@@ -54,9 +54,9 @@ class Train(nn.Module):
         loss.backward()
         optimizer.step()
         epoch_loss += loss/37
-      epoch_loss_list.append(round(epoch_loss.item(),2))
 
       if (epoch+1)%1000 == 0 or epoch == 0:
+        epoch_loss_list.append(round(epoch_loss.item(),2))
         print(f'Epoch {epoch+1} - Loss: {epoch_loss:.4f}')
 
     return epoch_loss_list
