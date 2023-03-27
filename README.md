@@ -46,7 +46,7 @@ Clone the repository
 ```bash
 $ git clone https://github.com/neerajanand321/Symbolic_AI.git
 ```
-move to the directory
+Move to the directory
 ```bash
 cd Symbolic_AI/symbolicAI
 ```
