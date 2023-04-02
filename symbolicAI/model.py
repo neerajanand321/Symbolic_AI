@@ -62,3 +62,24 @@ class TransformerModel(nn.Module):
     x = self.output_layer(x)  # (batch_size, output_dim)
       
     return x
+  
+  class seq2seqTransformer(nn.Module):
+    def __init__(self, input_dim, output_dim, d_model, nhead, num_layers, dim_feedforward, dropout):
+        super().__init__()
+        self.encoder = nn.Embedding(input_dim, d_model)
+        self.decoder = nn.Embedding(output_dim, d_model)
+        self.transformer = nn.Transformer(d_model=d_model, nhead=nhead, num_encoder_layers=num_layers,
+                                          num_decoder_layers=num_layers, dim_feedforward=dim_feedforward, 
+                                          dropout=dropout)
+        self.fc = nn.Linear(d_model, output_dim)
+    
+    def forward(self, src, trg):
+        src = self.encoder(src)
+        trg = self.decoder(trg)
+        src = src.permute(1, 0, 2)
+        trg = trg.permute(1, 0, 2)
+        trg_mask = self.transformer.generate_square_subsequent_mask(trg.size(0)).to(trg.device)
+        output = self.transformer(src, trg, tgt_mask=trg_mask)
+        output = self.fc(output)
+        output = output.permute(1, 0, 2)
+        return output
