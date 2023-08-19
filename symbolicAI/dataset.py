@@ -69,4 +69,3 @@ class Data():
   def get_tokens_dict(self):
     # This function is used to get the token and vocab dict
     return [self.vocab_to_int, self.int_to_vocab]
-
